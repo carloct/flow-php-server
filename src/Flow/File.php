@@ -210,7 +210,7 @@ class File
         for ($i = 1; $i <= $totalChunks; $i++) {
             $path = $this->getChunkPath($i);
             if (file_exists($path)) {
-                unlink($path);
+                @unlink($path);
             }
         }
     }
